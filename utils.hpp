@@ -117,7 +117,7 @@ Strings load_dataset(const std::string& dataset_name, std::size_t length_limit){
   });
   std::clog << "Number of lines      : " << lines.size() << std::endl;
   std::clog << "Total bytes          : " << total_bytes << std::endl;
-  std::cout << "Number of characters : " << std::count(occur.begin(), occur.end(), true) << std::endl;
+  std::clog << "Number of characters : " << std::count(occur.begin(), occur.end(), true) << std::endl;
   std::clog << "Average length       : " << 1.0 * total_bytes / lines.size() << std::endl;
   std::clog << std::endl;
   return lines;

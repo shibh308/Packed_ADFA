@@ -59,7 +59,7 @@ public:
       edge_count += edges.size();
     }
     std::clog << "edge count: " << edge_count << std::endl;
-    std::clog << "--------------------------------" << std::endl;t add
+    std::clog << "--------------------------------" << std::endl;
   }
 };
 
