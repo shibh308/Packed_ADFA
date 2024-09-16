@@ -38,9 +38,10 @@ std::string out_csv_path = base_dir_path + "result.csv";
 
 struct ResultCsvWriter {
   std::ofstream ofs;
+  std::string dataset_name;
   std::size_t num_lines, total_length;
 public:
-  explicit ResultCsvWriter(const std::string& dataset_name, std::size_t num_lines, std::size_t total_length) : num_lines(num_lines), total_length(total_length){
+  explicit ResultCsvWriter(const std::string& dataset_name, std::size_t num_lines, std::size_t total_length) : dataset_name(dataset_name), num_lines(num_lines), total_length(total_length){
     bool exists = std::filesystem::exists(out_csv_path);
     ofs.open(out_csv_path, std::ios::app);
     if(!exists){
@@ -50,6 +51,7 @@ public:
   void write(const std::string& method, std::size_t time, std::size_t memory){
     std::time_t now = std::time(nullptr);
     ofs << std::put_time(std::localtime(&now), "%Y-%m-%d %H:%M:%S") << ",";
+    ofs << dataset_name << ",";
     ofs << num_lines << ",";
     ofs << total_length << ",";
     ofs << method << ",";
