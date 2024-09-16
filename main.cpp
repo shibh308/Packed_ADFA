@@ -67,6 +67,7 @@ int main(int argc, char** argv){
   ResultCsvWriter writer(dataset_name, positive.size(), total_length);
 
   BaseTrie trie(positive);
+  trie.print_stats();
   benchmark_search(trie, positive, negative, writer);
 
   [&](){
@@ -107,6 +108,7 @@ int main(int argc, char** argv){
 
   [&](){
     BaseADFA adfa(trie);
+    adfa.print_stats();
     benchmark_search(adfa, positive, negative, writer);
     [&]() {
       DoubleArrayADFA daadfa(adfa);

@@ -50,6 +50,17 @@ public:
   std::vector<std::vector<std::pair<Char, Index>>> to_vector() const{
     return maps.to_vector();
   }
+  void print_stats() const{
+    std::clog << "--------------------------------" << std::endl;
+    std::clog << "node count: " << node_count << std::endl;
+    std::size_t edge_count = 0;
+    std::vector<std::vector<std::pair<Char, Index>>> data = to_vector();
+    for(auto& edges : data){
+      edge_count += edges.size();
+    }
+    std::clog << "edge count: " << edge_count << std::endl;
+    std::clog << "--------------------------------" << std::endl;t add
+  }
 };
 
 // a static trie that uses binary search
@@ -462,6 +473,17 @@ public:
   }
   std::vector<std::vector<std::pair<Char, Index>>> to_vector() const{
     return maps.to_vector();
+  }
+  void print_stats() const{
+    std::clog << "--------------------------------" << std::endl;
+    std::vector<std::vector<std::pair<Char, Index>>> data = to_vector();
+    std::clog << "node count: " << data.size() << std::endl;
+    std::size_t edge_count = 0;
+    for(auto& edges : data){
+      edge_count += edges.size();
+    }
+    std::clog << "edge count: " << edge_count << std::endl;
+    std::clog << "--------------------------------" << std::endl;
   }
 };
 
