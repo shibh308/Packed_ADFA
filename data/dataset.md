@@ -3,7 +3,7 @@
 There are three dataset used in the paper.
 
 - `eu-2005`
-  - https://law.di.unimi.it/webdata/eu-2005/`
+  - https://law.di.unimi.it/webdata/eu-2005/
   - [download link](http://data.law.di.unimi.it/webdata/eu-2005/eu-2005.urls.gz)
 - `proteins`
   - https://pizzachili.dcc.uchile.cl/texts/protein/
