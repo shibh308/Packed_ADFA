@@ -1,6 +1,6 @@
 # Packed-ADFA
 
-This repository contains the implementation and benchmark script for Packed ADFA.
+This repository contains the implementation  for Packed ADFA.
 
 ## Datasets
 The datasets used in the paper are described in [dataset.md](https://github.com/shibh308/Packed_ADFA/blob/main/data/dataset.md).
